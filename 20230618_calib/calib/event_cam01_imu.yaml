@@ -1,0 +1,11 @@
+dataset_name: calib_20230426
+rostopic: '/stereo/davis_right/imu/data_raw' #Make sure this is correct
+update_rate: 1000.0 #Make sure this is correct
+
+#Accelerometer
+accelerometer_noise_density: 0.0024311863320207036
+accelerometer_random_walk: 0.00011100244711759451
+
+#Gyroscope
+gyroscope_noise_density: 0.00015199648703314342
+gyroscope_random_walk: 8.258095449843675e-06

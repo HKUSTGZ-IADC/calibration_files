@@ -1,0 +1,56 @@
+# data info
+data_path: /Titan/tmp/20220424_lab_calibration
+
+# senosr info
+lidar:
+  type: ouster
+  hz: 10
+  v_resolution: 128
+  h_resolution: 2048
+  point_topic: /os_cloud_node/points
+  imu_topic: /os_cloud_node/imu/data_raw
+  nearir_image_topic: /os_image_node/nearir_image
+  range_image_topic: /os_image_node/range_image
+  reflec_image_topic: /os_image_node/reflec_image
+  signal_image_topic: /os_image_node/signal_image
+  frame_id: ouster00
+
+frame_camera:
+  type: stereo
+  hz: 20
+  img_topicl: /stereo/frame_left/image_raw/compressed
+  img_topicr: /stereo/frame_right/image_raw/compressed
+  img_topicl_raw: /stereo/frame_left/image_raw
+  img_topicr_raw: /stereo/frame_right/image_raw
+  frame_id_l: frame_cam00
+  frame_id_r: frame_cam01
+
+event_camera:
+  type: stereo
+  img_hz: 20
+  event_input_hz: 30
+  event_output_hz: 1000
+  event_topicl: /stereo/davis_left/events
+  event_topicr: /stereo/davis_right/events
+  img_topicl: /stereo/davis_left/image_raw
+  img_topicr: /stereo/davis_right/image_raw
+  imu_topicl: /stereo/davis_left/imu/data_raw
+  imu_topicr: /stereo/davis_right/imu/data_raw
+  frame_id_l: event_cam00
+  frame_id_r: event_cam01
+  height: 260 
+  width: 346
+
+body_imu:
+  type: stim300
+  hz: 200
+  topic: /stim300/imu/data_raw
+  frame_id: body_imu
+
+gps:
+  type: rtk
+  hz: 10
+  gps_topic: /fix
+  vel_topic: /vel
+  frame_id: gps00
+

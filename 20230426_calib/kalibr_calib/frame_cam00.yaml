@@ -1,0 +1,14 @@
+cam0:
+  dataset_name: calib_20230426
+  camera_model: pinhole
+  intrinsics: [601.2618, 601.1773, 516.623, 395.985]
+  distortion_model: radtan
+  distortion_coeffs: [-8.97810012e-02, 8.48949999e-02, 8.13000021e-04, 4.37000010e-04]
+  T_cam_imu:
+  - [1.0, 0.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0, 0.0]
+  - [0.0, 0.0, 1.0, 0.0]
+  - [0.0, 0.0, 0.0, 1.0]  
+  timeshift_cam_imu: 0.0
+  rostopic: /stereo/frame_left/image_raw
+  resolution: [1024, 768]

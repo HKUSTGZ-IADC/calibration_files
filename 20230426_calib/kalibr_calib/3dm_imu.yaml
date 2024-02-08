@@ -1,0 +1,47 @@
+dataset_name: calib_20230426
+rostopic_imu: '/3dm_ins/imu/data_raw'
+rostopic_gnss_left: '/3dm_ins/gnss_left/fix'
+rostopic_gnss_right: '/3dm_ins/gnss_right/fix'
+rostopic_nav: '/3dm_ins/nav/odom'
+update_rate: 475.0  
+#to be modified
+#Accelerometer
+accelerometer_noise_density: 0.0023777720518818246
+accelerometer_random_walk: 1.0885363217411185e-05
+
+#Gyroscope
+gyroscope_noise_density: 5.6210762686976616e-05
+gyroscope_random_walk: 6.615657812411791e-07
+
+quaternion_sensor_3dm_nav:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_3dm_nav:
+  rows: 1
+  cols: 3
+  dt: f
+  data: []
+
+quaternion_sensor_3dm_gnss00:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_3dm_gnss00:
+  rows: 1
+  cols: 3
+  dt: f
+  data: []
+
+quaternion_sensor_3dm_gnss01:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_3dm_gnss01:
+  rows: 1
+  cols: 3
+  dt: f
+  data: []

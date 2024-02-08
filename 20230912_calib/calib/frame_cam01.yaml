@@ -1,0 +1,59 @@
+dataset_name: calib_20230912
+image_width: 1024
+image_height: 768
+camera_name: stereo_right_Flir_BFSU3
+rostopic: '/stereo/frame_right/image_raw/compressed'
+update_rate: 20.0
+
+camera_matrix:
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 602.1874,        0, 517.6783,
+                  0, 602.3430, 391.3128,
+                  0,        0,   1.0000 ]
+distortion_model: plumb_bob
+distortion_coefficients:
+   rows: 1
+   cols: 5
+   dt: f
+   data: [ -0.0909, 0.0892, 0.0007408, 0.0000216, 0.0]
+rectification_matrix:
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 1.0, 0.0, 0.0,
+           0.0, 1.0, 0.0,
+           0.0, 0.0, 1.0 ]
+projection_matrix:
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 602.1874,         0,  517.6783, 0.0,
+                  0,  602.3430,  391.3128, 0.0,
+                  0,         0,    1.0000, 0.0 ]
+quaternion_stereo:
+   rows: 1
+   cols: 4
+   dt: f
+   data: [ 0.999920, 0.006767, 0.005349, 0.009224]
+translation_stereo:
+   rows: 1
+   cols: 3
+   dt: f
+   data: [ -0.1594, -0.0005, 0.0001 ]
+   
+# NOTE(gogojjh): not updated, 20231030
+# Extrinsics from the sensor (reference) to body_imu (target)
+quaternion_sensor_body_imu:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [ 0.496518, 0.503561, -0.501849, 0.498038 ]
+translation_sensor_body_imu:
+  rows: 1
+  cols: 3 
+  dt: f
+  data: [ -0.090698, -0.017608, -0.086397 ]
+# t_body_imu = t_cam + timeshift
+timeshift_sensor_body_imu: -0.01386046589177228

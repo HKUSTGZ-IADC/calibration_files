@@ -1,0 +1,12 @@
+#Accelerometer
+accelerometer_noise_density: 0.0019926996884582146 
+accelerometer_random_walk: 0.0001580011933625812 
+
+#Gyroscope
+gyroscope_noise_density: 0.00014745413045136508 
+gyroscope_random_walk: 2.7576410462572525e-06 
+
+rostopic: '/stereo/davis_right/imu/data_raw' #Make sure this is correct
+update_rate: 1000.0 #Make sure this is correct
+
+timeshift_sensor_body_imu: -0.13741467808407898  # multi-imu calibration

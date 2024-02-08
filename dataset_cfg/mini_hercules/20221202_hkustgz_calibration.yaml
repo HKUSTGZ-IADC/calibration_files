@@ -1,0 +1,59 @@
+# bag info
+bag_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/mini_hercules/20221202_hkustgz_calibration/20221202_hkustgz_calibration.bag
+bag_ref_path: /Titan/dataset/FusionPortable_dataset/sensor_data/mini_hercules/20221202_hkustgz_calibration/20221202_hkustgz_calibration_ref.bag
+
+# data info
+data_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/mini_hercules/20221202_hkustgz_calibration/data
+data_ref_path_kitti: /Titan/dataset/FusionPortable_dataset/sensor_data/mini_hercules/20221202_hkustgz_calibration/data_ref_kitti
+data_online_call_path: /Titan/dataset/FusionPortable_dataset/sensor_data/mini_hercules/20221202_hkustgz_calibration/data_online_call
+
+# senosr info
+lidar:
+  type: velodyne
+  hz: 10
+  v_resolution: 16
+  h_resolution: 1500
+  point_topic: /velodyne_points
+  frame_id: velodyne
+
+frame_camera:
+  type: stereo
+  hz: 20
+  img_topicl: /camera1/image_color/compressed
+  img_topicr: /camera2/image_color/compressed
+  frame_id_l: frame_cam00
+  frame_id_r: frame_cam01
+
+event_camera:
+  type: no
+  
+body_imu:
+  type: fdi
+  hz: 100
+  topic: /fdi_imu
+  frame_id: body_imu
+
+gps:
+  type: no
+
+gt:
+  type: no
+
+# Follow notions from Kailbr 
+# t_imu = t_target + time_shift: time_shif < 0 if target sensor has longer latency
+# for example: t_imu = t_fcl + t_fcl_imu
+# t_lidar_imu = t_lidar_fcl + t_fcl_imu
+time_shift:
+  time_fcl_body_imu: 0.0
+  time_fcr_body_imu: 0.0
+  time_ecl_body_imu: 0.0
+  time_ecr_body_imu: 0.0
+  time_ecl_eclimu: 0.0
+  time_ecr_ecrimu: 0.0
+  time_lidar_fcl: 0.0
+  time_lidar_ecl: 0.0
+  time_lidar_body_imu: 0.0  # time_lidar_body_imu = time_lidar_fcl + time_fcl_body_imu
+  time_eclimu_body_imu: 0.0  # time_eclimu_body_imu = -time_ecl_eclimu + time_ecl_body_imu;
+  time_ecrimu_body_imu: 0.0  # time_ecrimu_body_imu = -time_ecr_ecrimu + time_ecr_body_imu;
+
+

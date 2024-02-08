@@ -1,0 +1,11 @@
+dataset_name: calib_20230618
+rostopic: '/stereo/davis_left/imu/data_raw'
+update_rate: 1000.0
+
+#Accelerometer
+accelerometer_noise_density: 0.0020336179712368025
+accelerometer_random_walk: 6.277798425260073e-05
+
+#Gyroscope
+gyroscope_noise_density: 0.00012840345108587985
+gyroscope_random_walk: 5.50055446927285e-06

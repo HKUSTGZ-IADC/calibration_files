@@ -1,0 +1,137 @@
+# bag info
+bag_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/quadrupedal_robot/20220718_lab_test/20220718_lab_test.bag
+bag_ref_path: /Titan/dataset/FusionPortable_dataset/sensor_data/quadrupedal_robot/20220718_lab_test/20220718_lab_test_ref.bag
+bag_tmp_path: /Titan/dataset/FusionPortable_dataset/sensor_data/quadrupedal_robot/20220718_lab_test/20220718_lab_test_other_topic.bag
+
+
+# data info
+data_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/quadrupedal_robot/20220718_lab_test/data
+data_ref_path_kitti: /Titan/dataset/FusionPortable_dataset/sensor_data/quadrupedal_robot/20220718_lab_test/data_ref_kitti
+
+# senosr info
+lidar:
+  type: ouster
+  hz: 10
+  v_resolution: 128
+  h_resolution: 2048
+  point_topic: /os_cloud_node/points
+  imu_topic: /os_cloud_node/imu/data_raw
+  nearir_image_topic: /os_image_node/nearir_image
+  range_image_topic: /os_image_node/range_image
+  reflec_image_topic: /os_image_node/reflec_image
+  signal_image_topic: /os_image_node/signal_image
+  frame_id: ouster00
+
+frame_camera:
+  type: stereo
+  hz: 20
+  img_topicl: /stereo/frame_left/image_raw/compressed
+  img_topicr: /stereo/frame_right/image_raw/compressed
+  img_topicl_raw: /stereo/frame_left/image_raw
+  img_topicr_raw: /stereo/frame_right/image_raw
+  frame_id_l: frame_cam00
+  frame_id_r: frame_cam01
+
+event_camera:
+  type: stereo
+  img_hz: 20
+  event_input_hz: 30
+  event_output_hz: 1000
+  event_topicl: /stereo/davis_left/events
+  event_topicr: /stereo/davis_right/events
+  img_topicl: /stereo/davis_left/image_raw
+  img_topicr: /stereo/davis_right/image_raw
+  imu_topicl: /stereo/davis_left/imu/data_raw
+  imu_topicr: /stereo/davis_right/imu/data_raw
+  frame_id_l: event_cam00
+  frame_id_r: event_cam01
+  height: 260 
+  width: 346
+
+body_imu:
+  type: stim300
+  hz: 200
+  topic: /stim300/imu/data_raw
+  frame_id: body_imu
+
+gps:
+  type: rtk
+  hz: 10
+  gps_topic: /fix
+  vel_topic: /vel
+  frame_id: gps00
+
+##################################################### 
+robot_dog:
+  type: unitree
+  hz: 500
+  imu_topic: /unitree/imu
+  body_odom_topic: /unitree/body_odom
+  foot_state_topic: /unitree/foot_state
+  joint_state_topic: /unitree/joint_state
+  robot_state_topic: /unitree/robot_state
+  frame_id_imu: unitree_body_imu
+  frame_id_odom: unitree_body_imu
+  frame_id_fr_hip: unitree_hip00
+  frame_id_fl_hip: unitree_hip01
+  frame_id_rr_hip: unitree_hip02
+  frame_id_rl_hip: unitree_hip03
+  frame_id_fr_thigh: unitree_thigh00
+  frame_id_fl_thigh: unitree_thigh01
+  frame_id_rr_thigh: unitree_thigh02
+  frame_id_rl_thigh: unitree_thigh03
+  frame_id_fr_calf: unitree_calf00
+  frame_id_fl_calf: unitree_calf01
+  frame_id_rr_calf: unitree_calf02
+  frame_id_rl_calf: unitree_calf03
+  frame_id_fr_foot: unitree_foot00
+  frame_id_fl_foot: unitree_foot01
+  frame_id_rr_foot: unitree_foot02
+  frame_id_rl_foot: unitree_foot03  
+
+auto_vehicle:
+  type: no
+  odom_hz: 10
+  cmd_hz: 75
+  chassis_feedback_topic: /apollo/chassis_feedback
+  chassis_cmd_topic: /apollo/chassis_cmd
+  chassis_sonar_topic: /apollo/chassis_sonar
+  wheel_odom_topic: /apollo/wheel_odom
+  frame_id_chassis: apollo_chassis # the middie of apollo_wheel00 + apollo_wheel01
+  frame_id_wheel_l: apollo_wheel00 # left wheel
+  frame_id_wheel_r: apollo_wheel01 # right wheel
+
+##################################################### 
+gt:
+  type: optitrack
+  hz: 120
+  topic_pose: /marker_1/pose
+  topic_groundpose: /marker_1/pose
+  topic_output_pose: /mocap_pose
+  topic_output_path: /mocap_path
+  frame_id: world_gt
+
+##################################################### 
+ext_body_imu_marker:
+  quaternion: [0.9999904, -0.0000975849, 0.00362322, 0.002418683]
+  translation: [-0.0009, 0.0125, 0.0878]
+
+##################################################### 
+# Follow notions from Kailbr 
+# t_imu = t_target + time_shift: time_shif < 0 if target sensor has longer latency
+# for example: t_imu = t_fcl + t_fcl_imu
+# t_lidar_imu = t_lidar_fcl + t_fcl_imu
+time_shift:
+  time_fcl_body_imu: 0.0
+  time_fcr_body_imu: 0.0
+  time_ecl_body_imu: 0.0
+  time_ecr_body_imu: 0.0
+  time_ecl_eclimu: 0.0
+  time_ecr_ecrimu: 0.0
+  time_lidar_fcl: 0.0
+  time_lidar_ecl: 0.0
+  time_lidar_body_imu: 0.0  # time_lidar_body_imu = time_lidar_fcl + time_fcl_body_imu
+  time_eclimu_body_imu: 0.0  # time_eclimu_body_imu = -time_ecl_eclimu + time_ecl_body_imu;
+  time_ecrimu_body_imu: 0.0  # time_ecrimu_body_imu = -time_ecr_ecrimu + time_ecr_body_imu;
+
+

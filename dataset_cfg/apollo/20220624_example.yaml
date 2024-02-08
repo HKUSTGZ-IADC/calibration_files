@@ -1,0 +1,127 @@
+# bag info
+bag_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/apollo/20220226_campus_road_day/20220226_campus_road_day.bag
+bag_ref_path: /Titan/dataset/FusionPortable_dataset/sensor_data/apollo/20220226_campus_road_day/20220226_campus_road_day_ref.bag
+
+# data info
+data_raw_path: /Titan/dataset/FusionPortable_dataset/sensor_data/apollo/20220226_campus_road_day/data
+data_ref_path_kitti: /Titan/dataset/FusionPortable_dataset/sensor_data/apollo/20220226_campus_road_day/data_ref_kitti
+
+# senosr info
+lidar:
+  type: ouster
+  hz: 10
+  v_resolution: 128
+  h_resolution: 2048
+  point_topic: /os_cloud_node/points
+  imu_topic: /os_cloud_node/imu/data_raw
+  nearir_image_topic: /os_image_node/nearir_image
+  range_image_topic: /os_image_node/range_image
+  reflec_image_topic: /os_image_node/reflec_image
+  signal_image_topic: /os_image_node/signal_image
+  frame_id: ouster00
+
+frame_camera:
+  type: stereo
+  hz: 20
+  img_topicl: /stereo/frame_left/image_raw/compressed
+  img_topicr: /stereo/frame_right/image_raw/compressed
+  img_topicl_raw: /stereo/frame_left/image_raw
+  img_topicr_raw: /stereo/frame_right/image_raw
+  frame_id_l: frame_cam00
+  frame_id_r: frame_cam01
+
+event_camera:
+  type: stereo
+  img_hz: 20
+  event_input_hz: 30
+  event_output_hz: 1000
+  event_topicl: /stereo/davis_left/events
+  event_topicr: /stereo/davis_right/events
+  img_topicl: /stereo/davis_left/image_raw
+  img_topicr: /stereo/davis_right/image_raw
+  imu_topicl: /stereo/davis_left/imu/data_raw
+  imu_topicr: /stereo/davis_right/imu/data_raw
+  frame_id_l: event_cam00
+  frame_id_r: event_cam01
+  height: 260 
+  width: 346
+
+body_imu:
+  type: stim300
+  hz: 200
+  topic: /stim300/imu/data_raw
+  frame_id: body_imu
+
+gt:
+  type: no
+  hz: 120
+  topic_pose: /marker_1/pose
+  topic_groundpose: /marker_1/pose
+  topic_output_pose: /mocap_pose
+  topic_output_path: /mocap_path
+  frame_id: world_gt
+
+##################################################### 
+gps:
+  type: rtk
+  hz: 10
+  gps_topic: /ublox/fix
+  vel_topic: /ublox/vel
+  time_topic: /ublox/time_reference
+  frame_id: gps00
+
+apollo:
+  hz: 10
+  wheel_vel_topicrl: /apollo/wheel_rear_left/vel
+  wheel_odom_topicrl: /apollo/wheel_rear_left/odom
+  wheel_vel_topicrr: /apollo/wheel_rear_right/vel
+  wheel_odom_topicrr: /apollo/wheel_rear_right/odom
+  frame_id_wheel_l: apollo_wheel00
+  frame_id_wheel_r: apollo_wheel01
+
+unitree:
+  hz: ???????
+  leg_vel_topicfl: /unitree/front_left/vel
+  leg_contact_force_topicfl: /unitree/front_left/contact_force
+  leg_vel_topicfr: /unitree_leg/front_right/vel
+  leg_contact_force_topicfr: /unitree_leg/front_right/contact_force
+  leg_vel_topicrl: /unitree_leg/rear_left/vel
+  leg_contact_force_topicrl: /unitree_leg/rear_left/contact_force
+  leg_vel_topicrr: /unitree_leg/rear_right/vel
+  leg_contact_force_topicrr: /unitree_leg/rear_right/contact_force
+  frame_id_fl: unitree_leg00
+  frame_id_fr: unitree_leg01
+  frame_id_rl: unitree_leg02
+  frame_id_rr: unitree_leg03
+
+3dm:
+  type: ins
+  hz: ???????
+  ins_gps_topic: /3dm/fix
+  ins_imu_topic: /3dm/imu
+  ins_pose_topic: /3dm/pose
+  frame_id: ins00
+#####################################################
+
+ext_body_imu_marker:
+  quaternion: [0.9999904, -0.0000975849, 0.00362322, 0.002418683]
+  translation: [-0.0009, 0.0125, 0.0878]
+
+# Follow notions from Kailbr 
+# t_imu = t_target + time_shift: time_shif < 0 if target sensor has longer latency
+# for example: t_imu = t_fcl + t_fcl_imu
+# t_lidar_imu = t_lidar_fcl + t_fcl_imu
+time_shift:
+  time_fcl_body_imu: 0.0
+  time_fcr_body_imu: 0.0
+  time_ecl_body_imu: 0.0
+  time_ecr_body_imu: 0.0
+  time_ecl_eclimu: 0.0
+  time_ecr_ecrimu: 0.0
+  time_lidar_fcl: 0.0
+  time_lidar_ecl: 0.0
+  time_lidar_body_imu: 0.0  # time_lidar_body_imu = time_lidar_fcl + time_fcl_body_imu
+  time_eclimu_body_imu: 0.0  # time_eclimu_body_imu = -time_ecl_eclimu + time_ecl_body_imu;
+  time_ecrimu_body_imu: 0.0  # time_ecrimu_body_imu = -time_ecr_ecrimu + time_ecr_body_imu;
+
+

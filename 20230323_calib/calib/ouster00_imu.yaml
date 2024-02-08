@@ -1,0 +1,14 @@
+#Accelerometer
+accelerometer_noise_density: 0.007575311319546376 
+accelerometer_random_walk: 0.0003157762686059487 
+
+#Gyroscope
+gyroscope_noise_density: 0.00035986799076537137 
+gyroscope_random_walk: 5.511335586835809e-06 
+
+rostopic: '/os_cloud_node/imu/data_raw' #Make sure this is correct
+update_rate: 100.0 #Make sure this is correct
+
+# TODO: googjjh, BUT not used in this case
+timeshift_sensor_body_imu: 0.0  # from multi-imu calibration
+

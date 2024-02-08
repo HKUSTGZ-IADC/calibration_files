@@ -1,0 +1,10 @@
+#Accelerometer
+accelerometer_noise_density: 0.0011501915187049582 
+accelerometer_random_walk: 3.729854069064516e-05 
+
+#Gyroscope
+gyroscope_noise_density: 5.084312924828687e-05 
+gyroscope_random_walk: 6.509823412408377e-07 
+
+rostopic: '/stim300/imu/data_raw' #Make sure this is correct
+update_rate: 200.0 #Make sure this is correct

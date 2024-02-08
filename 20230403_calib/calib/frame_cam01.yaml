@@ -1,0 +1,58 @@
+dataset_name: calib_20230403
+image_width: 2048
+image_height: 1536
+camera_name: stereo_right_Flir_BFSU3
+camera_matrix:
+  rows: 3
+  cols: 3
+  dt: f
+  data: [ 1.2073e+03, 0., 1.0355e+03,
+          0., 1.2076e+03, 0.7782e+03,
+          0., 0., 1. ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  dt: f
+  data: [ -0.0897, 0.0868, 0.0770e-03, 0.1200e-03, 0.0 ]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  dt: f
+  data: [ 1.0, 0.0, 0.0,
+          0.0, 1.0, 0.0,
+          0.0, 0.0, 1.0 ]
+projection_matrix:
+  rows: 3
+  cols: 4
+  dt: f
+  data: [ 1.2073e+03, 0., 1.0355e+03, 0.,
+          0., 1.2076e+03, 0.7782e+03, 0.,
+          0., 0., 1., 0.]
+
+# Extrinsics from the frame_cam01 to the frame_cam00
+# T_stereo = T^frame_cam01_frame_cam00 = T^frame_cam01_lidar * T^lidar_frame_cam00
+quaternion_stereo:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [ 0.723717, -0.018653, -0.689483, 0.022345 ]
+translation_stereo:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [ -0.027001, -0.014961, -0.227748 ]
+
+# Extrinsics from the sensor (reference) to body_imu (target)
+quaternion_sensor_body_imu:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [ 0.0034, -0.0017, 0.6934, -0.7205 ]
+translation_sensor_body_imu:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [ 0.0693, -0.0189, -0.1741 ]
+# t_body_imu = t_cam + timeshift
+timeshift_sensor_body_imu: 0.024336217126

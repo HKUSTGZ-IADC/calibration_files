@@ -1,0 +1,68 @@
+dataset_name: calib_20230425
+image_width: 346
+image_height: 260
+camera_name: stereo_left_DAVIS_346
+
+camera_matrix:
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 3.17368866e+02, 0., 1.75747238e+02, 
+           0., 3.17139832e+02, 1.24452499e+02, 
+           0., 0., 1. ]
+distortion_model: plumb_bob
+distortion_coefficients:
+   rows: 1
+   cols: 5
+   dt: f
+   data: [ -3.82295012e-01, 2.37171993e-01, 1.24500005e-03, 1.86700001e-03, -9.99969989e-02 ]
+rectification_matrix:
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 1.0, 0.0, 0.0,
+           0.0, 1.0, 0.0,
+           0.0, 0.0, 1.0 ]
+projection_matrix:
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 3.17368866e+02, 0., 1.75747238e+02, 0.0,
+           0., 3.17139832e+02, 1.24452499e+02, 0.0,
+           0., 0., 1., 0.0 ]
+quaternion_stereo:
+   rows: 1
+   cols: 4
+   dt: f
+   data: [ 1., 0., 0., 0. ]
+translation_stereo:
+   rows: 1
+   cols: 3
+   dt: f
+   data: [ 0., 0., 0. ]
+
+# Extrinsics from the sensor (reference) to body_imu (target)
+quaternion_sensor_body_imu:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [0.500356, 0.494326, -0.501538, 0.503729]
+translation_sensor_body_imu:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [0.113209, -0.012848, -0.085290]
+timeshift_sensor_body_imu: 0.0058710406836875615
+
+# extrinsics from the sensor (reference) to its own event camera imu (target)
+quaternion_sensor_event_cam00_imu:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [0.999963, 0.008408, 0.000337, 0.001513]
+translation_sensor_event_cam00_imu:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [-0.001627, 0.000229, -0.053838]
+timeshift_sensor_event_cam00_imu: 0.002118050891576162

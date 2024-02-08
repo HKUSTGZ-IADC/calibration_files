@@ -1,0 +1,49 @@
+dataset_name: calib_20230618
+rostopic_imu: '/unitree/imu/data_raw'
+rostopic_odom: '/unitree/odom'
+rostopic_joint_state: '/unitree/joint_state'
+update_rate: 500.0
+
+quaternion_sensor_unitree_hip00:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_unitree_hip00:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [] 
+
+quaternion_sensor_unitree_thign:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_unitree_thign:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [] 
+
+quaternion_sensor_unitree_calf00:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_unitree_calf00:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [] 
+
+quaternion_sensor_unitree_foot00:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [] # (qw, qx, qy, qz)
+translation_sensor_unitree_foot00:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [] 

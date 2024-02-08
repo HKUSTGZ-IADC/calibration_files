@@ -1,0 +1,140 @@
+dataset_path: /Titan/dataset/FusionPortable_dataset
+
+handheld:
+  garden_day:
+    bag_path: handheld/20220216_garden_day/20220216_garden_day.bag
+    bag_filter_path: handheld/20220216_garden_day/20220216_garden_day_filter.bag
+    bag_start_time: 1645002363.994561
+    cut_start_time: 1645002382.021602
+    cut_end_time: 1645002641.942955
+    bag_total_time: 288.066
+  garden_night:
+    bag_path: handheld/20220215_garden_night/20220215_garden_night.bag
+    bag_filter_path: handheld/20220215_garden_night/20220215_garden_night_filter.bag
+    bag_start_time: 1644928109.334638
+    cut_start_time: 1644928118.407644
+    cut_end_time: 1644928402.329834
+    bag_total_time: 293.0000725
+  canteen_day:
+    bag_path: handheld/20220216_canteen_day/20220216_canteen_day.bag
+    bag_filter_path: handheld/20220216_canteen_day/20220216_canteen_day_filter.bag
+    bag_start_time: 1645003050.573166
+    cut_start_time: 1645003073.060831
+    cut_end_time: 1645003304.235690
+    bag_total_time: 267.111626
+  canteen_night:
+    bag_path: handheld/20220215_canteen_night/20220215_canteen_night.bag
+    bag_filter_path: handheld/20220215_canteen_night/20220215_canteen_night_filter.bag
+    bag_start_time: 1644928742.757915
+    cut_start_time: 1644928760.354996
+    cut_end_time: 1644929050.758244
+    bag_total_time: 308.006617
+  building_day: 
+    bag_path: handheld/20220225_building_day/20220225_building_day.bag
+    bag_filter_path: handheld/20220225_building_day/20220225_building_filter_day.bag
+    bag_start_time: 1645778923.53
+    cut_start_time: 1645778923.53
+    cut_end_time: 1645779523.13
+    bag_total_time: 599
+  corridor_day:
+    bag_path: handheld/20220216_corridor_day/20220216_corridor_day.bag
+    bag_filter_path: handheld/20220216_corridor_day/20220216_corridor_day_filter.bag
+    bag_start_time: 1645005893.717230
+    cut_start_time: 1645005899.500419
+    cut_end_time: 1645006472.654763
+    bag_total_time: 609.306940
+  escalator_day:
+    bag_path: handheld/20220216_escalator_day/20220216_escalator_day.bag
+    bag_filter_path: handheld/20220216_escalator_day/20220216_escalator_day_filter.bag
+    bag_start_time: 1644980780.486745
+    cut_start_time: 1644980783.486745
+    cut_end_time: 1644981497.916417
+    bag_total_time: 722.5095  
+  MCR_calibration:
+    bag_path: handheld/20220216_MCR_calibration/20220216_MCR_calibration.bag
+    bag_filter_path: handheld/20220216_MCR_calibration/20220216_MCR_calibration_filter.bag
+    bag_start_time: 1645015871.862983
+    cut_start_time: 1645015888.529212
+    cut_end_time: 1645015929.229594
+    bag_total_time: 79.479271  
+  MCR_slow:
+    bag_path: handheld/20220216_MCR_slow/20220216_MCR_slow.bag
+    bag_filter_path: handheld/20220216_MCR_slow/20220216_MCR_slow_filter.bag
+    bag_start_time: 1645016443.348443
+    cut_start_time: 1645016443.348443
+    cut_end_time: 1645016492.494533
+    bag_total_time: 51.727932  
+  MCR_normal:
+    bag_path: handheld/20220216_MCR_normal/20220216_MCR_normal.bag
+    bag_filter_path: handheld/20220216_MCR_normal/20220216_MCR_normal_filter.bag
+    bag_start_time: 1645016371.487714
+    cut_start_time: 1645016371.487714
+    cut_end_time: 1645016417.085829
+    bag_total_time: 46.128075  
+  MCR_fast:
+    bag_path: handheld/20220216_MCR_fast/20220216_MCR_fast.bag
+    bag_filter_path: handheld/20220216_MCR_fast/20220216_MCR_fast_filter.bag
+    bag_start_time: 1645016536.856640
+    cut_start_time: 1645016536.856640
+    cut_end_time: 1645016572.361318
+    bag_total_time: 35.573215
+  campus_road_day:
+    bag_path: handheld/20220226_campus_road_day/20220226_campus_road_day.bag
+    bag_filter_path: handheld/20220226_campus_road_day/20220226_campus_road_day_filter.bag
+    bag_start_time: 1645837200.51
+    cut_start_time: 1645837200.51
+    cut_end_time: 1645838681.17
+    bag_total_time: 1480
+
+quadrupedal_robot:
+  MCR_slow_00: 
+    bag_path: quadrupedal_robot/20220219_MCR_slow_00/20220219_MCR_slow_00.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_slow_00/20220219_MCR_slow_00_filter.bag
+    bag_start_time: 1645258747.434395
+    cut_start_time: 1645258749.388011
+    cut_end_time: 1645258896.633641
+    bag_total_time: 159.762946
+  MCR_slow_01: 
+    bag_path: quadrupedal_robot/20220219_MCR_slow_01/20220219_MCR_slow_01.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_slow_01/20220219_MCR_slow_01_filter.bag
+    bag_start_time: 1645258520.448764
+    cut_start_time: 1645258520.448764
+    cut_end_time: 1645258647.966585
+    bag_total_time: 134.260387
+  MCR_normal_00:
+    bag_path: quadrupedal_robot/20220219_MCR_normal_00/20220219_MCR_normal_00.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_normal_00/20220219_MCR_normal_00_filter.bag
+    bag_start_time: 1645251909.251742
+    cut_start_time: 1645251912.133790
+    cut_end_time: 1645252016.888868
+    bag_total_time: 111.564061
+  MCR_normal_01:
+    bag_path: quadrupedal_robot/20220219_MCR_normal_01/20220219_MCR_normal_01.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_normal_01/20220219_MCR_normal_01_filter.bag
+    bag_start_time: 1645252070.459587
+    cut_start_time: 1645252072.468720
+    cut_end_time: 1645252168.247937
+    bag_total_time: 100.876732
+  MCR_fast_00: 
+    bag_path: quadrupedal_robot/20220219_MCR_fast_00/20220219_MCR_fast_00.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_fast_00/20220219_MCR_fast_00_filter.bag
+    bag_start_time: 1645252247.200766
+    cut_start_time: 1645252251.360670
+    cut_end_time: 1645252351.519470
+    bag_total_time: 107.420044
+  MCR_fast_01: 
+    bag_path: quadrupedal_robot/20220219_MCR_fast_01/20220219_MCR_fast_01.bag
+    bag_filter_path: quadrupedal_robot/20220219_MCR_fast_01/20220219_MCR_fast_01_filter.bag
+    bag_start_time: 1645259258.311698
+    cut_start_time: 1645259258.311698
+    cut_end_time: 1645259380.600447
+    bag_total_time: 125.438741
+
+apollo:
+  campus_road: 
+    bag_path: apollo/2022024_campus_road/2022024_campus_road.bag
+    bag_filter_path: apollo/2022024_campus_road/2022024_campus_road_filter.bag
+    bag_start_time: 1645662552.64
+    cut_start_time: 1645662552.64
+    cut_end_time: 1645663909.39
+    bag_total_time: 1356.75
