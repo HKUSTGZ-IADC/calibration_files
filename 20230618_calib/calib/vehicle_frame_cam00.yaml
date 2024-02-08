@@ -36,12 +36,12 @@ quaternion_stereo:
    rows: 1
    cols: 4
    dt: f
-   data: [ 1., 0., 0., 0. ]
+   data: [ ]
 translation_stereo:
    rows: 1
    cols: 3
    dt: f
-   data: [ 0., 0., 0. ]
+   data: [ ]
 
 # Extrinsics from the sensor (reference) to body_imu (target)
 quaternion_sensor_body_imu:

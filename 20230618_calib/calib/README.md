@@ -16,7 +16,8 @@
 1. [ ] Extrinsics from frame_cam00 to vehicle_frame_cam00
 
 ## NOTE:
-1. The projection matrix is equal to the camera matrix for each camera since we provide the raw distorted images. For whom want to compute the correct **projection matrix** and **rectification matrix** with rectificed images, you can try ```stereoRectify(K1, D1, K2, D2, Size(width, height), R, T_vec, R1, R2, P1, P2, Q)```
+1. The projection matrix is equal to the camera matrix for each camera since we provide the raw distorted images. 
+For whom want to compute the correct **projection matrix** and **rectification matrix** with rectificed images, you can try ```stereoRectify(K1, D1, K2, D2, Size(width, height), R, T_vec, R1, R2, P1, P2, Q)```
 
 
 

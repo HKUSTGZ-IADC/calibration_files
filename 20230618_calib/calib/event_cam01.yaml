@@ -46,12 +46,12 @@ quaternion_sensor_body_imu:
   rows: 1
   cols: 4
   dt: f
-  data: [0.494229, 0.503492, -0.498260, 0.503952]
+  data: [ 0.4830, 0.5097, -0.5045, 0.5023 ]
 translation_sensor_body_imu:
   rows: 1
   cols: 3
   dt: f
-  data: [-0.138292, -0.012517, -0.076550]
+  data: [ -0.3648, -0.0501, -0.2401 ]
 timeshift_sensor_body_imu: 0.0013711961567853537
 
 # extrinsics from the sensor (reference) to its own event camera imu (target)

@@ -24,12 +24,12 @@ quaternion_sensor_frame_cam00:
   rows: 1
   cols: 4
   dt: f
-  data: [ 0.5059, -0.4952, 0.5025, -0.4963 ]
+  data: [ 0.5019, -0.4959, 0.5112, -0.4908 ]
 translation_sensor_frame_cam00:
   rows: 1
   cols: 3
   dt: f
-  data: [ 0.0488, 0.0872, -0.0507 ] 
+  data: [ 0.0929, 0.0754, -0.0195 ] 
 timeshift_sensor_frame_cam00: 0.0  # unknown
 
 # Extrinsics from the sensor (reference) to event_cam00 (target)
@@ -38,12 +38,12 @@ quaternion_sensor_event_cam00:
   rows: 1
   cols: 4
   dt: f
-  data: [ 1.0, 0.0, 0.0, 0.0 ]
+  data: [ 0.4854, -0.5048, 0.5142, -0.4951 ]
 translation_sensor_event_cam00:
   rows: 1
   cols: 3
   dt: f
-  data: [ 0.0, 0.0, 0.0 ]
+  data: [ 0.2761, 0.3770, -0.0756 ]
 timeshift_sensor_event_cam00: 0.0  # unknown
 
 # Extrinsics from the sensor (reference) to vehicle_frame_cam00 (target)
