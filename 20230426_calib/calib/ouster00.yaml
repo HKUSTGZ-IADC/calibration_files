@@ -45,3 +45,17 @@ translation_sensor_event_cam00:
   dt: f
   data: [0.0252, 0.1316, -0.0392]
 timeshift_sensor_event_cam00: 0.0  # unknown
+
+# Extrinsics from the sensor (reference) to body_imu (target)
+# option 1: T_sensor_body_imu = T_sensor_frame_cam00 * T_frame_cam00_body_imu
+quaternion_sensor_body_imu: !!opencv-matrix
+  rows: 1
+  cols: 4
+  dt: f
+  data: [0.999989, 0.000659, -0.001855, 0.004155]
+translation_sensor_body_imu: !!opencv-matrix
+  rows: 1
+  cols: 3
+  dt: f
+  data: [-0.035980, 0.017385, -0.033028]
+timeshift_sensor_body_imu: 0.0  # unknown
