@@ -48,12 +48,12 @@ timeshift_sensor_event_cam00: 0.0  # unknown
 
 # Extrinsics from the sensor (reference) to body_imu (target)
 # option 1: T_sensor_body_imu = T_sensor_frame_cam00 * T_frame_cam00_body_imu
-quaternion_sensor_body_imu: !!opencv-matrix
+quaternion_sensor_body_imu:
   rows: 1
   cols: 4
   dt: f
   data: [0.999989, 0.000659, -0.001855, 0.004155]
-translation_sensor_body_imu: !!opencv-matrix
+translation_sensor_body_imu:
   rows: 1
   cols: 3
   dt: f

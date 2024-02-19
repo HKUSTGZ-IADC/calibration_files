@@ -52,7 +52,7 @@ translation_sensor_body_imu:
   rows: 1
   cols: 3
   dt: f
-  data: [ 0.3761,-0.0453, -0.2629 ]
+  data: [ 0.3761, -0.0453, -0.2629 ]
 timeshift_sensor_body_imu: 0.0
 
 # extrinsics from the sensor (reference) to its own event camera imu (target)
