@@ -66,10 +66,10 @@ timeshift_sensor_body_imu: 0.0  # unknown
 #   rows: 1
 #   cols: 4
 #   dt: f
-#   data: [0.49528, -0.50506, 0.503696, -0.4958782]
+#   data: [ 0.49528, -0.50506, 0.503696, -0.4958782 ]
 # translation_sensor_vehicle_frame_cam00:
 #   rows: 1
 #   cols: 3
 #   dt: f
-#   data: [0.2751, 0.40420, -0.097767] 
+#   data: [ 0.2751, 0.40420, -0.097767 ]
 # timeshift_sensor_vehicle_frame_cam00: 0.0  # unknown
