@@ -53,5 +53,5 @@ translation_sensor_body_imu:
   rows: 1
   cols: 3
   dt: f
-  data: [ 0.386697, -0.058493, -0.312460 ]
+  data: [ 0.436697, -0.058493, -0.292460 ]
 timeshift_sensor_body_imu: -0.013618216766727708 # t_body_imu = t_cam + timeshift
