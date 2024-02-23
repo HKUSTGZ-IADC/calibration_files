@@ -46,20 +46,6 @@ translation_sensor_event_cam00:
   data: [ 0.2761, 0.3770, -0.0756 ]
 timeshift_sensor_event_cam00: 0.0  # unknown
 
-# Extrinsics from the sensor (reference) to body_imu (target)
-# option 1: T_sensor_body_imu = T_sensor_frame_cam00 * T_frame_cam00_body_imu
-quaternion_sensor_body_imu:
-  rows: 1
-  cols: 4
-  dt: f
-  data: [0.999989, 0.000659, -0.001855, 0.004155]
-translation_sensor_body_imu:
-  rows: 1
-  cols: 3
-  dt: f
-  data: [-0.035980, 0.017385, -0.033028]
-timeshift_sensor_body_imu: 0.0  # unknown
-
 # Extrinsics from the sensor (reference) to vehicle_frame_cam00 (target)
 # calibration approach: LCE-calib
 quaternion_sensor_vehicle_frame_cam00:
@@ -71,5 +57,19 @@ translation_sensor_vehicle_frame_cam00:
   rows: 1
   cols: 3
   dt: f
-  data: [ 0.2751, 0.40420, -0.097767 ]
+  data: [ 0.3502, 0.34020, -0.0332 ]
 timeshift_sensor_vehicle_frame_cam00: 0.0  # unknown
+
+# Extrinsics from the sensor (reference) to body_imu (target)
+# option 1: T_sensor_body_imu = T_sensor_frame_cam00 * T_frame_cam00_body_imu
+quaternion_sensor_body_imu:
+  rows: 1
+  cols: 4
+  dt: f
+  data: [ 0.999989, 0.000659, -0.001855, 0.004155 ]
+translation_sensor_body_imu:
+  rows: 1
+  cols: 3
+  dt: f
+  data: [ -0.035980, 0.017385, -0.033028 ]
+timeshift_sensor_body_imu: 0.0  # unknown
