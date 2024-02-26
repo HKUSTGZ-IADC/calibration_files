@@ -32,11 +32,12 @@ projection_matrix:
    data: [ 595.8528, 0.0,  504.8734, 0.0,
            0.0, 595.9186,  380.5306, 0.0,
            0.0,      0.0,  1.000000, 0.0 ]
+          
 quaternion_stereo:
    rows: 1
    cols: 4
    dt: f
-   data: [ 0.999962, -0.0050195, -0.00611, 0.003793 ]
+   data: [ 0.999945, -0.002371, 0.0061472, -0.0081107 ]
 translation_stereo:
    rows: 1
    cols: 3
@@ -53,6 +54,6 @@ translation_sensor_body_imu:
   rows: 1
   cols: 3 
   dt: f
-  data: [ -0.444021, -0.063517, -0.307416 ]
+  data: [ -0.474021, -0.063517, -0.307416 ]
 # t_body_imu = t_cam + timeshift
 timeshift_sensor_body_imu: -0.01386046589177228
